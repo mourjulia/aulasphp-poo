@@ -18,30 +18,24 @@ $clienteA = new Cliente ();
 $clienteB = new Cliente ();
  
 //Atribuindo valores oara atributos
-$clienteA->nome = "Alana Silva Rocha";
-$clienteA->idade = 17;
-$clienteA->email = "alana@gmail.com";
+$clienteA->setNome("Alana Silva Rocha");
+$clienteA->setIdade(17);
+$clienteA->setEmail( "alana@gmail.com");
  
-$clienteB->nome = "Clara Ruiz Igreja";
-$clienteB->idade = 16;
-$clienteB->email = "clara@gmail.com";
+$clienteB->setNome("Clara Ruiz Igreja");
+$clienteB->setIdade(16);
+$clienteB->setEmail("clara@gmail.com");
 ?>
  
 <h2>Acessando/lendo os dados dos objetos</h2>
  
-<h3>Cliente A</h3>
-<div>
-    <?=$clienteA->exibirDados()?>
-</div>
+
 <ul>
     <li><b>Idade:</b> <?=$clienteA->idade?></li>
     <li><b>E-mail:</b> <?=$clienteA->email?></li>
 </ul>
  
-<h3>Cliente B</h3>
-<div>
-    <?=$clienteB->exibirDados()?>
-</div>
+
 <ul>
     <li><b>Idade:</b> <?=$clienteB->idade?></li>
     <li><b>E-mail:</b> <?=$clienteB->email?></li>
