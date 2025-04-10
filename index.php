@@ -31,14 +31,16 @@ $clienteB->setEmail("clara@gmail.com");
  
 
 <ul>
-    <li><b>Idade:</b> <?=$clienteA->idade?></li>
-    <li><b>E-mail:</b> <?=$clienteA->email?></li>
+    <li><b>E-mail:</b> <?=$clienteB->getNome()?></li>
+    <li><b>Idade:</b> <?=$clienteA->getIdade()?></li>
+    <li><b>E-mail:</b> <?=$clienteA->getEmail()?></li>
 </ul>
  
 
 <ul>
-    <li><b>Idade:</b> <?=$clienteB->idade?></li>
-    <li><b>E-mail:</b> <?=$clienteB->email?></li>
+    <li><b>E-mail:</b> <?=$clienteB->getNome()?></li>
+    <li><b>Idade:</b> <?=$clienteB->getIdade()?></li>
+    <li><b>E-mail:</b> <?=$clienteB->getEmail()?></li>
 </ul>
  
 <h2>Testes de acesso aos recursos da classe através do objeto</h2>
