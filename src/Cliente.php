@@ -2,21 +2,12 @@
 class Cliente
 {
     private string $nome;
-    private int $idade;
     private string $email;
 
-    // Método Construtor (sempre é executado automaticamente ao criar objeto)
-    public function __construct(string $nome, int $idade, string $email)
+    public function __construct(string $nome, string $email)
     {
         $this->setNome($nome);
-        $this->setIdade($idade);
         $this->setEmail($email);
-    }
-
-    public function verificarIdade(): string {
-        if( $this->idade < 18 ) return "menor de idade";
-        if( $this->idade < 60 ) return "adulto";
-        return "idoso";
     }
 
     private function setNome(string $nome): void 
@@ -24,14 +15,6 @@ class Cliente
         $this->nome = $nome;
     }
 
-    private function setIdade(int $idade): void 
-    {
-        if($idade < 0){
-            throw new InvalidArgumentException("Idade não pode ser negativa");
-        }
-
-        $this->idade = $idade;
-    }
 
     private function setEmail(string $email): void 
     {
@@ -47,10 +30,6 @@ class Cliente
         return $this->nome;
     }
 
-    public function getIdade(): int
-    {
-        return $this->idade;
-    }
 
     public function getEmail(): string 
     {
