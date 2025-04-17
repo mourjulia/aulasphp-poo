@@ -20,7 +20,17 @@ class PessoaJuridica extends Cliente
 
        $this->setSituacao(Situacao::PENDENTE);
 
-        
+    }
+
+    // Método polimórfico: sobrescreve o método relatorio() da superclasse Cliente
+    // Atençao: os metodos devem ter a mesma assinatura (nome, parametros e retorno)
+    public function relatorio(): string
+    {
+        return "<div>"
+            . parent::relatorio() . // Chama o método relatorio() da superclasse .
+            "<p><b>Nome Fantasia:</b> {$this->getNomeFantasia()} </p>
+            <p><b>CNPj:</b> {$this->getCnpj()} </p>
+        </div>";
     }
 
     private function setCnpj(string $cnpj): void 
