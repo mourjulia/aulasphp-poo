@@ -19,6 +19,10 @@ require_once "src/Models/PessoaJuridica.php"; // Subclasse
 
 $clientePF = new PessoaFisica("Julia", "julia@gmail.com", 17, "123.456.789-00");
 $clientePJ = new PessoaJuridica("João Pedro", "joao@tabajara.com", "32.789.5555/000-1", 2019, "Corporação Tabajara");
+
+//  codigo abaixo dará erro, pois Cliente é uma superclasse e não pode ser crfiado objeto a partir dela
+//$clienteGenerico = new Cliente("Cliente Genérico", "cliente@genérico.com");
+//var_dump($clienteGenerico);
 ?>
 
     <h2>Relatórios</h2>
