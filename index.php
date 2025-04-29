@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 06</title>
+    <title>Exemplo 07</title>
 </head>
 <body>
     <h1>PHP com POO - Exemplo 06</h1>
@@ -12,6 +12,7 @@
 <?php
 /*Sempre que trabalharmos com namespace, será necessário especificar
 atraves do 'use' quais classes/enums/funções serão usadas. */
+use MeuProjeto\Calculadora;
 use MeuProjeto\Models\PessoaFisica;
 use MeuProjeto\Models\PessoaJuridica;
 
@@ -33,6 +34,10 @@ definir/usar uma subclasse que extenda PessoaJuridica (que é uma classe final) 
 //require_once "src/Models/MEI.php";
 //$clienteMEI = new MEI("AAA", "a@a.com", "123", 2025, "aaaaAA");
 //var_dump($clienteMEI);
+
+/*Acessando um método estático (ou seja, sem passar por um objeto) */
+$total = Calculadora::somar(10, 5);
+echo $total;
 ?>
     <h2>Relatórios</h2>
 
