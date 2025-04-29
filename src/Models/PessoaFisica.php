@@ -1,5 +1,8 @@
 <?php
 namespace MeuProjeto\Models;
+
+use MeuProjeto\Enums\Situacao;
+use InvalidArgumentException;
 final class PessoaFisica extends Cliente
 {
     private int $idade;
