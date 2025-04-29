@@ -1,4 +1,5 @@
 <?php
+namespace MeuProjeto\Models;
 final class PessoaFisica extends Cliente
 {
     private int $idade;
